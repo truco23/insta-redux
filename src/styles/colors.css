@@ -1,0 +1,12 @@
+:root {
+  /* white */
+  --white-primary: #fff;
+  --white-secondary: #fafafa;
+
+  /* gray */
+  --gray-primary: #dbdbdb;
+  --gray-secondary: #262626;
+
+  /* blue */
+  --blue-disable: #0095f64d;
+}
