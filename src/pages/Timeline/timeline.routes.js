@@ -3,7 +3,7 @@ const Timeline = lazy(() => import("./"));
 
 const timelineRoutes = [
   {
-    exact: true,
+    exact: false,
     path: "/timeline",
     component: Timeline,
   },

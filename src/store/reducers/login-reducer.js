@@ -1,18 +1,19 @@
-const loginReducer = (state, action) => {
-  console.log("state", state);
-  console.log("action", action);
+const INITALSTATE = {
+  enable: false,
+  email: "",
+  password: "",
+};
 
+const loginReducer = (state = INITALSTATE, action) => {
   if (action.type === "ACTION_LOGIN") {
     return {
       ...state,
       enable: action.enable,
+      email: action.values.email,
+      password: action.values.password,
     };
   }
-  return [
-    {
-      enable: false,
-    },
-  ];
+  return state;
 };
 
 export default loginReducer;

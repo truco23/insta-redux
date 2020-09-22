@@ -11,23 +11,24 @@ import store from "./store";
 function App() {
   return (
     <div className="App">
-      {appRoutes.map((item, indice) => {
-        return (
-          <Provider store={store} key={indice}>
-            <Suspense key={indice} fallback={<div>Carregando</div>}>
-              <BrowserRouter>
-                <Switch>
+      <BrowserRouter>
+        <Suspense fallback={<div>Carregando</div>}>
+          <Switch>
+            <Provider store={store}>
+              {appRoutes.map((item, indice) => {
+                return (
                   <Route
+                    key={indice}
                     exact={item.exact}
                     path={item.path}
                     component={item.component}
                   />
-                </Switch>
-              </BrowserRouter>
-            </Suspense>
-          </Provider>
-        );
-      })}
+                );
+              })}
+            </Provider>
+          </Switch>
+        </Suspense>
+      </BrowserRouter>
     </div>
   );
 }

@@ -57,11 +57,18 @@
 }
 
 .login-form-button {
-  background-color: var(--blue-disable);
   color: var(--white-primary);
   border: none;
   border-radius: 0.4rem;
   height: 2.8rem;
   margin-top: 1.4rem;
   width: 100%;
+}
+
+.login-form-button-disabled {
+  background-color: var(--blue-disable);
+}
+
+.login-form-button-enable {
+  background-color: var(--blue-primary);
 }
